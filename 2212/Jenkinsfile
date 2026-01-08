@@ -7,7 +7,7 @@ pipeline {
     }
     parameters {
         string(name: 'DOCKERHUB_USERNAME', defaultValue: 'academyitwill')
-        string(name: 'GITHUB_USERNAME', defaultValue: '2025-01-JAVA-DEVELOPER-159')
+        string(name: 'GITHUB_USERNAME', defaultValue: '2025-07-JAVA-DEVELOPER-162')
     }
 
     environment {
