@@ -63,7 +63,7 @@ pipeline {
                 script {
                     def returnValue
                     while (returnValue != "true true"){
-                        returnValue = sh(returnStdout: true, encoding: 'UTF-8', script: "kubectl get -n anotherclass-221 pods -l instance='api-tester-2214',blue-green-no='2' -o jsonpath='{.items[*].status.containerStatuses[*].ready}'")
+                        returnValue = sh(returnStdout: true, encoding: 'UTF-8', script: "kubectl get -n anotherclass-221 pods -l instance='api-tester-2214',blue-green-no='2' -o jsonpath='{.items[*].status.containerStatuses[*].ready}'").trim()
                         echo "${returnValue}"
                         sleep 5
                     }
